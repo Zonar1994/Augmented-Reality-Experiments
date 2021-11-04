@@ -15,13 +15,13 @@
 <body>
   <a-scene ar>  
     <a-assets>
-  <a-asset id="cesium-man" src="whale.gsm"></a-asset>
+  <a-asset id="cesium-man" src="Dinosaurn.fbx"></a-asset>
 </a-assets>
 <a-camera ar-raycaster raycaster cursor="fuse:false"> </a-camera>
 <a-ring class="cursor" radius-inner="0.1" radius-outer="0.2"  
         color="teal" position="0 -0.8 -5" rotation="-90 0 0">
 </a-ring>
-<a-entity id="walker" class="cursor" gltf-model="#cesium-man" position="0 0 -5" scale="0.5 0.5 0.5" 
+<a-entity id="walker" class="cursor" fbx-model="#cesium-man" position="0 0 -5" scale="0.5 0.5 0.5" 
           animation-mixer>
 </a-entity>
   </a-scene>
