@@ -13,20 +13,23 @@
 
 
 <body>
-    
+  <!-- starts the ar-scene  -->
   <a-scene ar>  
     <a-assets>
-  <a-asset id="cesium-man" src="mammoet.glb"></a-asset>
+      <!-- this is the mammoth model -->
+  <a-asset id="mammoth" src="mammoth.glb"></a-asset> 
 </a-assets>
 <a-camera ar-raycaster raycaster cursor="fuse:false"> </a-camera>
 <a-ring class="cursor" radius-inner="0.1" radius-outer="0.2"  
         color="black" position="0 -0.8 -5" rotation="-90 0 0">
 </a-ring>
-<a-entity id="walker" class="cursor" gltf-model="#cesium-man" position="0.3 0 -5" scale="0.002 0.002  0.002" 
+<!-- this is the scale for the obj model -->
+<a-entity id="walker" class="cursor" gltf-model="#mammoth" position="0.3 0 -5" scale="0.002 0.002  0.002" 
           animation-mixer>
 </a-entity>
   </a-scene>
   <script type="text/javascript">
+    // this opens the scene
   function onSceneLoaded() {
     const raycaster = document.querySelector('[ar-raycaster]');
     const cursor = document.querySelector('.cursor');
@@ -34,6 +37,7 @@
       cursor.setAttribute('position', event.detail.intersections[0].point);
     });
   }
+  // scales the scene
   scale="0.002 0.002  0.002" 
   const scene = document.querySelector('a-scene');
   scene.addEventListener('loaded', onSceneLoaded);
